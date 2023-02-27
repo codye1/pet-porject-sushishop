@@ -25,7 +25,7 @@ const Home = () => {
     return (
 
         <div className='App'>
-            {data? <CardTovar tovar={data[0]}/> : <h1>Хуй</h1>}
+            {data? <CardTovar tovar={data[0]}/>  : <h1>Хуй</h1>}
 
             <div className='swiper-content'>
             <Swiper

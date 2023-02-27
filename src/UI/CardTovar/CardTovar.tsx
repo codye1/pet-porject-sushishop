@@ -10,6 +10,18 @@ const CardTovar: React.FC<Card> = ({tovar}) => {
     return (
         <div className='card'>
             <img src={tovar.photo} alt="" />
+            <div className='card-lables'>
+                <div className='card-lables-cont shef'>
+                    <div className='card-lable'>
+                        <span>Шеф рекомендує</span>
+                    </div>
+                </div>
+                <div className='card-lables-cont '>
+                    <div className='card-lable action'>
+                        <span>Акція</span>
+                    </div>
+                </div>
+            </div>
             <div className='back-card'>
                 <strong>
                     <span>{tovar.harch.weight} Г</span>
@@ -23,7 +35,16 @@ const CardTovar: React.FC<Card> = ({tovar}) => {
                     <div className='price'>
                         <div className='current-price'>{tovar.price} грн</div>
                     </div>
-                    <div className='koshik'></div>
+                    <div className='koshik'>
+                        <div>
+                            <div className='koshik-block'>
+                                <button className='koshik-button'>
+                                    <span className='koshik-text'>В кошик</span>
+                                    <span className='koshik-harak'></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
