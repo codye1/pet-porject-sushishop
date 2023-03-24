@@ -11,7 +11,7 @@ interface Seti {
 
 
 const initialState: Seti = {
-    posti: [{title:'5',id:'s',body:'4',action:0,price:1,photo:'ss',shef:false,harch:{
+    posti: [{ key:1,title:'5',id:'s',body:'4',action:0,price:1,photo:'ss',shef:false,harch:{
       weight:1370,
       fats:137.19,
       squirrels:264.67,

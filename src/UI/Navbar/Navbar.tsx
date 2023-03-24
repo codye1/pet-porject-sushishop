@@ -19,22 +19,36 @@ const Navbar = () => {
 
 
     return (
-        <div className="containernav">
-            <div className="navbar">
-                <div className="navbar-left">
-                    <div className="country">Київ</div>
-                    <select  className="sel" name="select">
-                        <option value="value1">UA</option>
-                        <option value="value2">RU</option>
-                    </select>
+        <header className="top-header">
+            <div className="top-header-up">
+                <div className="container">
+                <div className="header-left">
+                    <div className="city-phone-wrapper">
+                        <div className="choose-city">
+                                <div className="city">
+                                    <p className="city-name">Київ</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div className="header-lang-block">
+                        <button className="lang-button">
+                            <span className="lang">
+                                UA
+                                <img src="https://kyiv.sushi-master.ua/img/header/arrow-down.svg" alt="" style={{width:'17px',height:"17px"}} />
+                            </span>
+                            <span className="lang-cont"></span>
+                        </button>
+                    </div>
                     <a className="tell" href="tel:044 333 70 64">044 333 70 64</a>
                 </div>
-                <div className="navbar-center">
-                    <Link to='/home'><img  className="navbar-center logo" src="https://x100-venus-sm-ua.gumlet.io/VENUS/WEB/4C25DB70-1DCE-11EB-A6EC-7B643829D650/1675018701967_%D1%81%D0%B0%D0%B9%D1%82.svg?alt=media&token=a2835928-b794-4bd1-8b2c-7e722bd31b10" alt=""
-                    /></Link>
-
+                <div className="header-center">
+                    <div className="header-center-cont">
+                        <Link to='/home'>
+                            <img  className="navbar-center logo" src="https://x100-venus-sm-ua.gumlet.io/VENUS/WEB/4C25DB70-1DCE-11EB-A6EC-7B643829D650/1675018701967_%D1%81%D0%B0%D0%B9%D1%82.svg?alt=media&token=a2835928-b794-4bd1-8b2c-7e722bd31b10" alt=""
+                        /></Link>
+                    </div>
                 </div>
-                <div className="navbar-right">
+                <div className="header-right">
                     <div className="header-searchs">
                         <img  src="https://kyiv.sushi-master.ua/img/header/search.svg" alt="" />
                     </div>
@@ -43,29 +57,31 @@ const Navbar = () => {
                             <span className="vhod">
                                 <img src="https://kyiv.sushi-master.ua/img/header/user.svg" alt="" />
                                 Увійти
-
                             </span>
+                            <span className="cont-butt"></span>
                         </button>
-
                     </div>
-                    <div className="korzina">
-                        <img src="https://kyiv.sushi-master.ua/img/header/cart.svg" className="korzinas"  alt="" />
-                    </div>
+                    <span>
+                        <div className="korzina">
+                            <img src="https://kyiv.sushi-master.ua/img/header/cart.svg" alt="" />
+                            <span>
+                            </span>
+                        </div>
+                    </span>
+                </div>
                 </div>
             </div>
-            <div>
-                <div className="spec">
-
-                </div>
+            <div className="spec-cont">
+                <div className="spec"></div>
             </div>
             <div className="top-header-down">
-                <div className="container">
+                <div className="containernav">
                     <div className="top-header-down--list ">
                         {navbar_down.map(p=><NavLink key={p.site} to={'/'+p.site} className={({isActive})=>isActive? "setss" : 'setssact'} >{p.name}</NavLink>)}
                         </div>
                     </div>
                 </div>
-        </div>
+        </header>
     );
 };
 

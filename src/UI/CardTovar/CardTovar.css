@@ -1,5 +1,4 @@
 .card{
-    margin-left: 100px;
     background-color: aqua;
     max-height: 465px;
     max-width: 371px;
@@ -11,11 +10,15 @@
     flex-wrap: wrap;
     position: relative;
     box-sizing: border-box;
-}
 
+}
+*{
+    text-decoration: none;
+
+}
 .back-card{
     display: flex;
-    align-items: flex-end;
+    align-items: start;
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 24px;
@@ -36,6 +39,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-right: 280px;
     display: flex;
 }
 
@@ -63,8 +67,7 @@
 .card-title-block{
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
 body h2 {
@@ -82,6 +85,8 @@ body h2 {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 
+
+
     font-size: 14px;
     line-height: 21px;
     margin: 14px 0;
@@ -96,18 +101,19 @@ body h2 {
     flex-wrap: wrap;
     margin-left: 0;
     margin-right: 16px;
+
 }
 
 .koshik{
     display: flex;
     align-items: center;
+    margin-right: 0px;
 }
 
 .koshik-block{
     transition: opacity 100ms ease 0s, transform 100ms ease 0s;
     transform: none;
     opacity: 1;
-
 
 }
 
@@ -213,4 +219,86 @@ body .btn span {
 
 .action{
     background-color: rgb(255, 0, 0);
+}
+
+.action-price{
+    white-space: nowrap;
+    color: #e30613;
+    margin-right: 20px;
+}
+
+.old-price{
+    color: var(--text-color);
+    white-space: nowrap;
+    font-weight: 400;
+    text-decoration: line-through;
+    font-size: 15px;
+    margin-left: 0;
+    font-family: SemiBold;
+}
+.prices{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-right: 16px;
+}
+
+.button-card{
+    margin-right: 0px;
+}
+
+.koshik-active{
+    transition: opacity 100ms ease 0s, transform 100ms ease 0s;
+    transform: none;
+    opacity: 1;
+}
+
+.koshik-active-block{
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 48px;
+    background: #f9c9cf!important;
+    border: 0!important;
+    border-radius: 6px;
+}
+
+.remove{
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.count{
+    color: var(--in-cart-text);
+    font-size: 14px;
+    line-height: 16px;
+    font-family: Bold;
+    position: absolute;
+    right: 85px;
+    text-align: center;
+    pointer-events: none;
+    color: red;
+}
+
+.add{
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+svg[Style] {
+    width: 13;
+    height: 13;
+    fill: none;
 }

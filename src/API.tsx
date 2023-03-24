@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import React from 'react';
 
 export interface Tovar {
+    key:number
     id: string
     title: string
     action:number
